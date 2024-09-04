@@ -28,7 +28,8 @@
 
       <div class="thumbnails">
         <div v-for="(slide, index) in slides" :key="index" class="thumbnail">
-          <img :src="slide.image" :alt="slide.title">
+          <img :src="slide.image" :alt="slide.title" :class="{ active: index === currentIndex }"
+            @click="goToSlide(index)">
         </div>
       </div>
     </div>

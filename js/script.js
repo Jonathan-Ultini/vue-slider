@@ -42,6 +42,9 @@ const app = Vue.createApp({
           ? this.slides.length - 1
           : this.currentIndex - 1;
     },
+    goToSlide(index) {
+      this.currentIndex = index;
+    },
 
   },
 
