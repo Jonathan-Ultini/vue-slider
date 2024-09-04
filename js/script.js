@@ -45,9 +45,20 @@ const app = Vue.createApp({
     goToSlide(index) {
       this.currentIndex = index;
     },
-
+    startAutoplay() {
+      this.autoplayInterval = setInterval(this.nextSlide, 3000);
+    },
+    stopAutoplay() {
+      clearInterval(this.autoplayInterval);
+      this.autoplayInterval = null;
+    },
   },
-
+  mounted() {
+    this.startAutoplay();
+  },
+  beforeUnmount() {
+    this.stopAutoplay();
+  },
 });
 
 app.mount('#app');
