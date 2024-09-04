@@ -16,7 +16,7 @@
 
 
   <div id="app">
-    <div class="slider">
+    <div class="slider" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
       <img :src="slides[currentIndex].image" :alt="slides[currentIndex].title">
       <h2>{{ slides[currentIndex].title }}</h2>
       <p>{{ slides[currentIndex].text }}</p>
