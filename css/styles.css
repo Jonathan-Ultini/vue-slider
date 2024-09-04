@@ -28,6 +28,23 @@ body {
   font-size: 16px;
 }
 
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.thumbnail img {
+  width: 100px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.thumbnail img.active {
+  border-color: #35424a;
+}
 
 .slider-controls {
   position: absolute;

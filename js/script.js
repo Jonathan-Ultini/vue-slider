@@ -41,7 +41,8 @@ const app = Vue.createApp({
         this.currentIndex === 0
           ? this.slides.length - 1
           : this.currentIndex - 1;
-    }
+    },
+
   },
 
 });
